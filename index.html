@@ -4,48 +4,181 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Meine GitHub Pages Webseite</title>
+    <title>Moderne Webseite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
+        /* Allgemeine Stile */
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
             color: #333;
         }
-        header {
+
+        h1, h2, h3 {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation */
+        nav {
             background-color: #333;
             color: #fff;
-            padding: 10px 20px;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav ul li a:hover {
+            color: #00bcd4;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://via.placeholder.com/1600x800') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background-color: #00bcd4;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            background-color: #0288d1;
+        }
+
+        /* Services Section */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            padding: 50px 20px;
+            background-color: #fff;
             text-align: center;
         }
-        main {
-            padding: 20px;
+
+        .service-item {
+            background-color: #00bcd4;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
         }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-item h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        /* Footer */
         footer {
-            text-align: center;
-            padding: 10px;
             background-color: #333;
             color: white;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Willkommen auf meiner GitHub Pages Seite!</h1>
-    </header>
 
-    <main>
-        <h2>Über mich</h2>
-        <p>Dies ist meine erste GitHub Pages Seite, die ich mit GitHub erstellt habe.</p>
-        <p>GitHub Pages ermöglicht es dir, Webseiten direkt aus deinem Repository zu hosten.</p>
-    </main>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#">Startseite</a></li>
+            <li><a href="#services">Unsere Dienste</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Willkommen auf unserer modernen Website</h1>
+        <p>Wir bieten innovative Lösungen für deine digitalen Bedürfnisse.</p>
+        <button class="cta-button">Erfahre mehr</button>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="service-item">
+            <h3>Webentwicklung</h3>
+            <p>Erstelle eine moderne, benutzerfreundliche Website, die deinen Anforderungen entspricht.</p>
+        </div>
+        <div class="service-item">
+            <h3>App-Entwicklung</h3>
+            <p>Wir entwickeln maßgeschneiderte Apps für iOS und Android.</p>
+        </div>
+        <div class="service-item">
+            <h3>SEO Optimierung</h3>
+            <p>Optimiere deine Website für bessere Auffindbarkeit in Suchmaschinen.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Mein Name</p>
+        <p>&copy; 2025 Deine Firma. Alle Rechte vorbehalten.</p>
     </footer>
+
+    <script>
+        // Optionale Interaktivität für die CTA-Schaltfläche
+        document.querySelector('.cta-button').addEventListener('click', () => {
+            alert('Du hast auf "Erfahre mehr" geklickt!');
+        });
+    </script>
 </body>
 </html>
